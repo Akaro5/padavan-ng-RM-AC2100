@@ -1,4 +1,4 @@
 PADAVAN_REPO="https://github.com/nilabsent/padavan-ng"
 PADAVAN_BRANCH="master"
 PADAVAN_COMMIT="HEAD"
-PADAVAN_TOOLCHAIN_URL=""
+PADAVAN_TOOLCHAIN_URL="https://github.com/nilabsent/padavan-ng-builder/releases/download/tool-1-101-bdc03b9bd/toolchain_uClibc-ng-1.0.56.tar.xz"
