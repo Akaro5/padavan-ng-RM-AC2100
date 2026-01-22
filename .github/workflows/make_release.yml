@@ -132,7 +132,7 @@ jobs:
       uses: softprops/action-gh-release@v2
       with:
         tag_name: fw-${{ github.run_number }}-${{ env.FIRMWARE_BUILDS_VER }}-${{ env.FIRMWARE_BUILDS_REV }}
-        name: 3.4.${{ env.FIRMWARE_ROOTFS_VER }}-${{ env.FIRMWARE_BUILDS_VER }}-${{ env.FIRMWARE_BUILDS_REV }}
+        name: Firmware 3.4.${{ env.FIRMWARE_ROOTFS_VER }}-${{ env.FIRMWARE_BUILDS_VER }}-${{ env.FIRMWARE_BUILDS_REV }}
         files: release/*.zip
         draft: false
         prerelease: false
