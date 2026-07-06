@@ -52,9 +52,7 @@ jobs:
       run: |
         pushd padavan-ng/trunk
 
-        sed -i 's|\r$||g' libc/Makefile
-        . <(grep -hE '^\s*LIBC_DIR\s*=' libc/Makefile | tr -d ' ')
-        echo "LIBC_DIR=$LIBC_DIR" >> $GITHUB_ENV
+        echo "LIBC_DIR=$(make -sC libc print-SRC_NAME)" >> $GITHUB_ENV
 
         sed -i 's|\r$||g' versions.inc
         grep -hE '^\s*FIRMWARE_[A-Z0-9_]+=' versions.inc >> "$GITHUB_ENV"
@@ -66,7 +64,7 @@ jobs:
 
         cd padavan-ng/toolchain
 
-        echo "Build building toolchain ${LIBC_DIR}"
+        echo "Building toolchain ${LIBC_DIR}"
         echo "Waiting for the last 589 lines of logs (~25-40 minutes)..."
 
         TEMP_LOG=$(mktemp)
